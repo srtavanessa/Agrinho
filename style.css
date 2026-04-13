@@ -1,0 +1,48 @@
+/* Reset básico */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',sans-serif; }
+body { line-height:1.6; color:#333; transition: background-color 0.5s, color 0.5s; }
+.container { width:90%; max-width:1200px; margin:0 auto; }
+
+/* Header */
+header { background:#2c6e49; color:white; padding:20px 0; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+header h1 { margin-left:10px; }
+nav ul { list-style:none; display:flex; gap:20px; }
+nav a { color:white; text-decoration:none; font-weight:bold; transition: color 0.3s; }
+nav a:hover { color:#a1e887; }
+#toggleDark { background:#1f4f33; color:white; border:none; padding:8px 12px; border-radius:5px; cursor:pointer; transition: background 0.3s; }
+#toggleDark:hover { background:#145022; }
+
+/* Hero */
+.hero { background:url('assets/bg-hero.jpg') center/cover no-repeat; color:white; text-align:center; padding:120px 20px; }
+.hero button { padding:10px 20px; border:none; border-radius:5px; background:#a1e887; cursor:pointer; transition: background 0.3s; }
+.hero button:hover { background:#8bd06c; }
+
+/* Sections */
+section { padding:80px 0; }
+.about, .sustainability, .contact { background:#f4f4f4; }
+.cards { display:flex; flex-wrap:wrap; gap:20px; margin-top:40px; }
+.card { background:white; padding:20px; flex:1; min-width:250px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); }
+
+/* Form */
+form { display:flex; flex-direction:column; gap:10px; }
+input, textarea { padding:10px; font-size:1rem; border:1px solid #ccc; border-radius:5px; }
+button[type=submit] { background:#2c6e49; color:white; padding:10px; border:none; border-radius:5px; cursor:pointer; transition: background 0.3s; }
+button[type=submit]:hover { background:#1f4f33; }
+.font-controls { margin-top:10px; }
+.font-controls button { margin-right:5px; padding:5px 10px; cursor:pointer; }
+
+/* Footer */
+footer { background:#2c6e49; color:white; text-align:center; padding:20px 0; }
+
+/* Dark Mode */
+body.dark { background:#121212; color:#f0f0f0; }
+body.dark header, body.dark footer { background:#1b3d2e; }
+body.dark .card { background:#1e1e1e; }
+
+/* Responsivo */
+@media (max-width:768px) {
+    nav ul { flex-direction:column; gap:10px; margin-top:10px; }
+    .cards { flex-direction:column; }
+    .hero { padding:80px 20px; }
+}
